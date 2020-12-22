@@ -1,0 +1,27 @@
+<div class="main" #main>
+  <child-comp class="quantity" #quantity></child-comp>
+  <div class="list" (click)="onClose($event)" #list></div>
+  <div class="top">
+      <input [(ngModel)]="query" placeholder="Name"/>
+  </div>
+
+  <div class="myFon" (click)="onEdit($event)" #myFon>
+
+      <div class="body" (click)="onAdd($event)">
+        <div class="elem" *ngFor="let table of tables | search:'title':query">
+          <p class="pp">{{table?.title}}</p>
+          <div class="addAa" #addAa>
+              <a class="add">add</a>
+          </div>
+          <img src="{{table?.img}}" alt="" class="img" #img>
+          <span>
+            <input name="" value="1" class="val">
+          </span>
+        </div>
+      </div>
+
+
+  </div>
+
+
+</div>
