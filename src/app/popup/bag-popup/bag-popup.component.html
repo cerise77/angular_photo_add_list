@@ -1,0 +1,23 @@
+<div class="pop-bag-item" *ngFor="let bag of bagList;let i = index">
+    <div class="pop-bag-item-image-wrapper">
+      <a  title={{bag.table.title}}>
+        <img  class="pop-bag-item-image" src="{{bag.table.img}}" alt="">
+      </a>
+    </div>
+    <div class="pop-bag-item-details">
+        <h1 class="pop-bag-item-title">
+            <a href="">{{bag.table.title}}</a>
+        </h1>
+    </div>
+    <div class="pop-bag-remove-wrapper">
+        <span (click)="removeFromBag(i)" class="bag-remove">X</span>
+    </div>
+</div>
+<div *ngIf="bagList.length > 0">
+  <div class="" (click)="bagService.toggleBag()">
+
+  </div>
+</div>
+<div *ngIf="bagList.length == 0">
+    <strong class="bag-empty">Your bag is empty</strong>
+</div>

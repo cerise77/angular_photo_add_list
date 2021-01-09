@@ -1,0 +1,29 @@
+.main-header{
+  background-color: #e3e3e3;
+}
+
+
+.topProducts{
+  position: relative;
+}
+.basketOne{
+  margin-bottom: 15px;
+  z-index: 100;
+  position: absolute;
+  right: 2px;
+}
+.quantity{
+  margin-bottom: -15px;
+  position: absolute;
+  right: 2px;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding-top: 2px;
+  background-color: #edba1d;
+  text-align: center;
+  font-size: 0.8em;
+  cursor: pointer;
+  margin-left: -10px;
+  z-index: 300;
+}

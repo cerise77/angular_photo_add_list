@@ -9,13 +9,16 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 .main{
-  padding: 20px;
+  padding: 30px 20px 20px;
   background: #d0d1d2;
   z-index: 50;
 }
 .top input{
   width: 100%;
-  margin-bottom: 10px;
+  margin: 45px 0 10px;
+}
+.myFon{
+  margin-top: 40px;
 }
 
 .body{
@@ -25,29 +28,64 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
   grid-row-gap: 15px;
 
 }
+@media only screen and (max-width: 900px) {
+  .body{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+  }
+}
+@media only screen and (max-width: 768px) {
+  .body{
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 15px;
+
+  }
+}
 .body .elem{
   padding: 10px;
   background-color: #e3e3e3;
+  position: relative;
 }
 .body .pp{
   font-size: 1em;
   font-weight: 700;
 }
+.text{
+  font-size: 0.8em;
+}
+.price{
+  margin: 10px 0 0;
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+}
+
 .body img{
+  margin: 10px 0;
   width: 100%;
 }
-.img {
-  cursor: pointer;
+.elem {
+  /*cursor: pointer;*/
 }
-.add{
-  display: block;
-  text-decoration: none;
-  cursor: pointer;
-  float: right;
-}
+
 .val{
   display: none;
 }
+.add{
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+}
+.add:hover{
+  font-weight: 600;
+}
+
+
 
 
 /*---------popup---------*/
@@ -105,20 +143,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 
 
-/*-----quantity-----------------*/
-.quantity{
-  display: none;
-  margin-bottom: 10px;
-  float: right;
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  padding-top: 2px;
-  background-color: #edba1d;
-  text-align: center;
-  font-size: 0.8em;
-  cursor: pointer;
-}
+
 .list{
   display: none;
   position: fixed;
@@ -163,30 +188,4 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 }
 .closeClone:after {
   transform: rotate(-45deg);
-}
-
-/*----------popup---------------*/
-.fonLast{
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  opacity: 0.4;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  z-index: 100;
-}
-.popup{
-  position: fixed;
-  top: 10%;
-  right: 10%;
-  padding: 30px 10px 5px;
-  width: 30%;
-  background: #e3e3e3;
-  z-index: 400;
-}
-.cloneLast{
-  width: 40%;
 }

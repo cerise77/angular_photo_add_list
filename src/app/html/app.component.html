@@ -1,27 +1,22 @@
-<div class="main" #main>
-  <child-comp class="quantity" #quantity></child-comp>
-  <div class="list" (click)="onClose($event)" #list></div>
+<div class="main">
+  <header-main></header-main>
   <div class="top">
-      <input [(ngModel)]="query" placeholder="Name"/>
+      <input [(ngModel)]="sert" placeholder="Name"/>
   </div>
 
-  <div class="myFon" (click)="onEdit($event)" #myFon>
+  <div class="myFon">
 
-      <div class="body" (click)="onAdd($event)">
-        <div class="elem" *ngFor="let table of tables | search:'title':query">
+      <div class="body">
+        <div class="elem" *ngFor="let table of tables | filter:'title':sert">
+
           <p class="pp">{{table?.title}}</p>
-          <div class="addAa" #addAa>
-              <a class="add">add</a>
+          <div class="addAa">
+              <a class="add" (click)="addToBag(table)">add</a>
           </div>
-          <img src="{{table?.img}}" alt="" class="img" #img>
-          <span>
-            <input name="" value="1" class="val">
-          </span>
+          <img src="{{table?.img}}" alt="" class="img">
         </div>
       </div>
 
-
   </div>
-
 
 </div>
