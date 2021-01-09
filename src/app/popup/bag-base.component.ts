@@ -11,11 +11,6 @@ export class BagBaseComponent{
         this.bagService.bagListSubject
             .subscribe(res => {
                 this.bagList = res;
-                /*let total = 0;
-                for(let bag of this.bagList) {
-                    total += bag.table.price * bag.quantity;
-                }
-                this.totalPrice = total;*/
             })
     };
     removeFromBag = index => {
